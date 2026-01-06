@@ -74,10 +74,7 @@ async def handle_private_message(message: Message) -> None:
                 logger.error(f"Failed to forward media: {e}", exc_info=True)
         
         # Send confirmation to user
-        await message.answer(
-            "✅ Xabaringiz support guruhiga yuborildi. "
-            "Tez orada javob olasiz!"
-        )
+        await message.answer("✅")
         
         logger.info(f"Message from user {user.id} forwarded to support group")
         
